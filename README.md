@@ -28,7 +28,6 @@ The backend is built using **Django + Django REST Framework**, while the fronten
 - Axios
 - Minimal custom CSS (no heavy UI libraries)
 
----
 
 ## Setup / Run Instructions
 
@@ -37,11 +36,10 @@ The backend is built using **Django + Django REST Framework**, while the fronten
 - Node.js 18+
 - npm
 
----
 
 ### Backend Setup
 
-```bash
+
 cd backend
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
