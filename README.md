@@ -65,10 +65,15 @@ Frontend runs at:
 ``
 http://localhost:5173
 ``
+
 API Documentation
+
 Authentication
+
 Register User
+
 POST /api/register/
+
 ``
 {
   "username": "user01",
@@ -76,8 +81,11 @@ POST /api/register/
   "password": "test1234"
 }
 ``
+
 Login User
+
 POST /api/login/
+
 ``
 {
   "username": "user01",
@@ -86,12 +94,14 @@ POST /api/login/
 ``
 
 Response:
+
 ``
 {
   "access": "<jwt_access_token>",
   "refresh": "<jwt_refresh_token>"
 }
 ``
+
 User Profile (Authenticated)
 
 All profile APIs require:
@@ -99,10 +109,12 @@ All profile APIs require:
 Authorization: Bearer <access_token>
 
 Fetch Profile
+
 GET /api/profile/
 
 
 Response:
+
 ``
 {
   "username": "user01",
@@ -110,14 +122,19 @@ Response:
   "aadhaar": "123456789012"
 }
 ``
+
 Update Aadhaar
+
 POST /api/profile/
+
 ``
 {
   "aadhaar": "123456789012"
 }
 ``
+
 Database Schema
+
 User Model
 
 | Field             | Type         | Description                |
