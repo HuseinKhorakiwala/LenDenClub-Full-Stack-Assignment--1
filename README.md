@@ -39,58 +39,59 @@ The backend is built using **Django + Django REST Framework**, while the fronten
 
 ### Backend Setup
 
-
+```
 cd backend
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
 Create a .env file inside the backend/ directory:
-
+``
 AADHAAR_ENCRYPTION_KEY=<your-generated-fernet-key>
-
+``
 
 Run migrations and start the server:
-
+```
 python manage.py migrate
 python manage.py runserver
-
+```
 
 Backend runs at:
-
+``
 http://127.0.0.1:8000
-
+``
 
 Frontend runs at:
-
+``
 http://localhost:5173
-
+``
 API Documentation
 Authentication
 Register User
 POST /api/register/
-
+``
 {
   "username": "user01",
   "email": "user01@test.com",
   "password": "test1234"
 }
-
+``
 Login User
 POST /api/login/
-
+``
 {
   "username": "user01",
   "password": "test1234"
 }
-
+``
 
 Response:
-
+``
 {
   "access": "<jwt_access_token>",
   "refresh": "<jwt_refresh_token>"
 }
-
+``
 User Profile (Authenticated)
 
 All profile APIs require:
@@ -102,20 +103,20 @@ GET /api/profile/
 
 
 Response:
-
+``
 {
   "username": "user01",
   "email": "user01@test.com",
   "aadhaar": "123456789012"
 }
-
+``
 Update Aadhaar
 POST /api/profile/
-
+``
 {
   "aadhaar": "123456789012"
 }
-
+``
 Database Schema
 User Model
 
@@ -154,7 +155,7 @@ Users can explicitly reveal the full Aadhaar using a password-style eye toggle
 
 Logout clears authentication state immediately
 
-AI Tool Usage Log 
+**AI Tool Usage Log** 
 
 AI-based development tools were used to improve productivity and correctness during development.
 
